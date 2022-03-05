@@ -1,0 +1,91 @@
+body, html {
+    background-color: rgb(0, 155, 155);
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+#knockout-app {
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.redButton {
+    width: 48px;
+    height: 48px;
+    background-color: red;
+}
+
+.greenButton {
+    width: 48px;
+    height: 48px;
+    background-color: green;
+}
+
+button {
+    color: white;
+    border: 1px solid black;
+    -webkit-transition: background 0.5s; /* For Safari 3.0 to 6.0 */
+    transition: background 0.5s; /* For modern browsers */
+}
+
+.redButton:hover {
+    background: lightcoral;
+    cursor:pointer;
+}
+
+.greenButton:hover {
+    background: lightgreen;
+    cursor:pointer;
+}
+
+.counter-ui-container {
+    display: flex;
+    align-items: center;
+}
+
+.counter-ui-container > * {
+    margin: 0 10px;
+}
+
+.counter {
+    font-size: 48px;
+    font-weight: bold;
+    color: black;
+}
+
+.card-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    position: absolute;
+}
+
+footer > span {
+    color: white;
+    font-size: 1.5em;
+}
