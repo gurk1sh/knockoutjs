@@ -39,7 +39,7 @@ body, html {
     background-color: green;
 }
 
-button {
+.btn {
     color: white;
     border: 1px solid black;
     -webkit-transition: background 0.5s; /* For Safari 3.0 to 6.0 */

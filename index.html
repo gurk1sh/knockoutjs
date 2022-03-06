@@ -19,10 +19,13 @@
             <div class="row">
                 <div class="card-section">
                     <div class="counter-ui-container">
-                        <button data-bind="click: decrement" class="redButton">-</button>
+                        <button data-bind="click: decrement" class="btn redButton">-</button>
                         <span data-bind="text: counter" class="counter">0</span>
-                        <button data-bind="click: increment" class="greenButton">+</button>
+                        <button data-bind="click: increment" class="btn greenButton">+</button>
                     </div>
+                    <button data-bind="click: autoClicker(1)">Upgrade | 10 clicks</button>
+                    <button data-bind="click: autoClicker(10)">Upgrade | 100 clicks</button>
+                    <button data-bind="click: autoClicker(100)">Upgrade | 1000 clicks</button>
                 </div>
             </div>
         </div>
