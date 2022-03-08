@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
 body, html {
-    background-color: rgb(0, 155, 155);
+    background-color: rgb(25, 25, 25);
     height: 100%;
     overflow: hidden;
 }
@@ -20,72 +22,117 @@ body, html {
     width: 100%;
 }
 
+.buttonrow {
+    display: grid;
+    margin-bottom: 1.2rem;
+    grid-gap: 5px;
+    grid-template: 
+            "a a a" 40px
+            "b c c" 40px
+            "b c c" 40px / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
 #knockout-app {
-    background-color: rgb(255, 255, 255);
-    width: 40%;
+    width: fit-content;
     display: flex;
     flex-direction: column;
-}
-
-.redButton {
-    width: 48px;
-    height: 48px;
-    background-color: red;
-}
-
-.greenButton {
-    width: 48px;
-    height: 48px;
-    background-color: green;
+    padding: 25px;
 }
 
 .btn {
-    color: white;
-    border: 1px solid black;
-    -webkit-transition: background 0.5s; /* For Safari 3.0 to 6.0 */
-    transition: background 0.5s; /* For modern browsers */
+    color: rgb(225, 225, 225);;
+    font-size: 24px;
+    background-color: rgb(100, 100, 100);
+    border-radius: 5px;
+    border: none;
 }
 
-.redButton:hover {
-    background: lightcoral;
-    cursor:pointer;
-}
-
-.greenButton:hover {
-    background: lightgreen;
-    cursor:pointer;
-}
-
-.counter-ui-container {
-    display: flex;
-    align-items: center;
-}
-
-.counter-ui-container > * {
-    margin: 0 10px;
-}
-
-.counter {
-    font-size: 48px;
+.btn p {
+    margin: 0;
     font-weight: bold;
-    color: black;
 }
 
-.card-section {
+.btn:hover {
+    cursor:pointer;
+}
+
+.controlrow > * {
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+}
+
+.backarrow {
+    background-image: url("images/backarrow.png");
+    background-size: 100% 100%;
+    width: 48px;
+    height: 36px;
+}
+
+.game-row {
+    display: flex;
+}
+
+.game-tile {
+    border: 1px solid gray;
+    width: 3.6rem;
+    height: 3.6rem;
+}
+
+.game-tile span {
+    font-size: 48px;
+    font-family: 'Staatliches', cursive;
+    color: white;
+    text-shadow: 1px 2px 2px black;
+}
+
+.wordsrow {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
-footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-    position: absolute;
+h1 {
+    margin: 0;
 }
 
-footer > span {
+.headerText {
+    font-size: 48px;
+    font-family: 'Staatliches', cursive;
     color: white;
-    font-size: 1.5em;
 }
+
+#game-board {
+    margin-bottom: 25px;
+}
+
+.onePointer {
+    background-color: rgb(225, 255, 75);
+}
+
+.twoPointer {
+    background-color: rgb(0, 225, 25);
+}
+
+/* Standard syntax */
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+  
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+  
+  .apply-shake {
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  }

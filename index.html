@@ -7,33 +7,38 @@
 
 <body>
     <div class="container">
-        <div id="knockout-app" class="card">
+        <div id="knockout-app">
             <div class="row">
                 <header>
-                    <h1>Clicker</h1>
+                    <h1 class="headerText">Wordle</h1>
                 </header>
             </div>
-            <div class="row">
-                <h2>Hello, <span data-bind="text: userName"></span></h2>
+
+            <div class="row wordsrow" id="game-board">
+                <game-board params='gameboardwords: words'></game-board>
             </div>
-            <div class="row">
-                <div class="card-section">
-                    <div class="counter-ui-container">
-                        <button data-bind="click: decrement" class="btn redButton">-</button>
-                        <span data-bind="text: counter" class="counter">0</span>
-                        <button data-bind="click: increment" class="btn greenButton">+</button>
-                    </div>
-                    <button data-bind="click: autoClicker(1)">Upgrade | 10 clicks</button>
-                    <button data-bind="click: autoClicker(10)">Upgrade | 100 clicks</button>
-                    <button data-bind="click: autoClicker(100)">Upgrade | 1000 clicks</button>
-                </div>
+
+            <div data-bind="foreach: buttons" class="row buttonrow">
+                <button data-bind="click: $root.buildWordle" class="btn">
+                    <p data-bind="text: button"></p>
+                </button>
             </div>
+            <div class="row controlrow">
+                <button class="btn backarrow" data-bind="click: removeLetter">
+                </button>
+                <button class="btn" data-bind="click: sendWordle">
+                    Enter
+                </button>
+                <button class="btn" data-bind="click: resetGame">
+                    Reset
+                </button>
+            </div>
+
         </div>
-        <footer>
-            <span>Footer text</span>
-        </footer>
     </div>
 </body>
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js'></script>
-<script type='text/javascript'src="CounterViewModel.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type='text/javascript' src="WordleViewModel.js"></script>
+
 </html>
