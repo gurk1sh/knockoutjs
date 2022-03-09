@@ -152,7 +152,7 @@ class WordleViewModel {
             type: "POST",
             url: "https://word.digitalnook.net/api/v1/start_game/",
             headers: { 
-                "Access-Control-Allow-Origin:": "https://gurk1sh.github.io/knockoutjs-Wordle/",
+                "Access-Control-Allow-Origin:": "https://gurk1sh.github.io/",
                 "Access-Control-Allow-Headers:": "Content-Type",
           },
             contentType: "application/json; charset=utf-8",
@@ -192,7 +192,7 @@ class WordleViewModel {
         $.ajax({
             type: "POST",
             url: "https://word.digitalnook.net/api/v1/guess/",
-            headers: { "Access-Control-Allow-Origin:": "*" },
+            headers: { "Access-Control-Allow-Origin:": "https://gurk1sh.github.io/" },
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(request),
             dataType: "json",
